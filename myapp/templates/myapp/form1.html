@@ -1,0 +1,12 @@
+{% extends 'myapp/layout.html' %}
+
+{% block content %}
+<form method="post" action="{% url 'post-showForm' %}">
+
+{% csrf_token %}
+{{ my_form.as_p }}
+
+<input type="submit" />
+
+</form>
+{% endblock %}

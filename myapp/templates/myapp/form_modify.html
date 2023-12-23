@@ -1,0 +1,12 @@
+{% extends 'myapp/layout.html' %}
+
+{% block content %}
+<form method="post" action="{% url 'update-user' id=instance_to_update.id %}">
+
+{% csrf_token %}
+{{ my_form.as_p }}
+
+<input type="submit" />
+
+</form>
+{% endblock %}

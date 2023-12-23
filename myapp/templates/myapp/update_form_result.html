@@ -1,0 +1,11 @@
+{% extends 'myapp/layout.html' %}
+
+{% block content %}
+<p>
+{{ message }}
+{{ newUsername }} avec email : {{ newEmail }} 
+</p>
+
+
+<a href="{% url 'get-instances' %}">view list users</a>
+{% endblock  %}

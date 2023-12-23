@@ -1,0 +1,16 @@
+{% extends 'myapp/layout.html' %}
+
+{% block content %}
+
+<ul>
+{% for instance in instances %}
+<li>username - {{  instance.username }}
+password - {{  instance.password }}
+email - {{  instance.email }} </li>
+
+
+{% endfor %}
+</ul>
+
+<a href="{% url 'showForm' %}"> create user </a>
+{% endblock %}
